@@ -18,8 +18,11 @@
     "core-js": "^3.3.2",
     "flatted": "^2.0.1",
     "jquery": "^3.4.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-switches": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.5",

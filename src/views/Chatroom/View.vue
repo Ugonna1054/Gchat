@@ -6,9 +6,9 @@
                     <a @click="$router.go(-1)"><div class="back-btn">
                         <font-awesome-icon icon="angle-left" class="search"/>
                     </div></a>
-                    <div class="user-img2">
+                    <router-link to="Profile"><div class="user-img2">
                         <img src="../../assets/images/user1.png" >
-                    </div>
+                    </div></router-link>
                     <div class="head-user-title">
                         Lucy Williams
                     </div>

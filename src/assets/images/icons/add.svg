@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-20.7%" y="-20.7%" width="141.4%" height="141.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.31564139 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8-Plus-Copy-9" transform="translate(-331.000000, -658.000000)">
+            <g id="Group-3" filter="url(#filter-1)" transform="translate(335.000000, 660.000000)">
+                <circle id="Oval" fill="#4850B1" cx="29" cy="29" r="29"></circle>
+                <path d="M32.0208333,27.1875 L39.875,27.1875 L39.875,32.0208333 L32.0208333,32.0208333 L32.0208333,39.875 L27.1875,39.875 L27.1875,32.0208333 L19.3333333,32.0208333 L19.3333333,27.1875 L27.1875,27.1875 L27.1875,19.3333333 L32.0208333,19.3333333 L32.0208333,27.1875 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,9 +8,12 @@ import VerifyNumber from './views/Login/VerifyNumber.vue'
 import Username from './views/Login/Username.vue'
 import Chatroom from './views/Chatroom/Chatroom.vue'
 import View from './views/Chatroom/View.vue'
+import Profile from './views/Chatroom/Profile.vue'
 import Groupchat from './views/Groupchat/Groupchat.vue'
 import ViewGroup from './views/Groupchat/ViewGroup.vue'
 import CreateGroup from './views/Groupchat/CreateGroup.vue'
+import SelectMembers from './views/Groupchat/SelectMembers.vue'
+import GroupInfo from './views/Groupchat/GroupInfo.vue'
 import Settings from './views/Settings/Settings.vue'
 
 
@@ -54,6 +57,11 @@ export default new Router({
           component: View
       },
       {
+          path: '/Profile',
+          name: 'Profile',
+          component: Profile
+      },
+      {
           path: '/Groupchat',
           name: 'Groupchat',
           component: Groupchat
@@ -67,6 +75,16 @@ export default new Router({
           path: '/CreateGroup',
           name: 'CreateGroup',
           component: CreateGroup
+      },
+      {
+          path: '/SelectMembers',
+          name: '/SelectMembers',
+          component: SelectMembers
+      },
+      {
+          path: '/GroupInfo',
+          name: '/GroupInfo',
+          component: GroupInfo
       },
       {
           path: '/Settings',
