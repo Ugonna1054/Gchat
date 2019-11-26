@@ -70,9 +70,10 @@
             <router-link to=""><div class="chat">
                 <font-awesome-icon icon="phone-alt" class="fontawesom"/>
             </div></router-link>
-            <div class="start-chat">
-                <font-awesome-icon icon="comment-alt" class="start-chat-icon"/>
-            </div>
+            <router-link to="CreateGroup">
+                <div class="start-chat">
+                    <font-awesome-icon icon="comment-alt" class="start-chat-icon"/>
+                </div></router-link>
             <router-link to="Groupchat"><div class="chat">
                 <font-awesome-icon icon="user-friends" class="fontawesom"/>
             </div></router-link>

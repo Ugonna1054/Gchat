@@ -114,7 +114,7 @@
         <div class="select-member-footer fixed-bottom">
             <div class="members-selected">
                 <div class="selected-number">6 Members Selected</div>
-                <router-link to="ViewGroup"><button class="next-btn">NEXT</button></router-link>
+                <router-link to="Groupchat"><button class="next-btn">NEXT</button></router-link>
             </div>
             <div class="unselect_user">
                 <div class="select_member">
