@@ -14,9 +14,9 @@
                     </div>
                 </div>
                 <div class="view-chat-head-right">
-                    <div class="option-nav">
+                    <router-link to="Settings"><div class="option-nav">
                         <font-awesome-icon icon="ellipsis-v" class="search"/>
-                    </div>
+                    </div></router-link>
                 </div>
             </div>
         </div>
@@ -67,11 +67,13 @@
 
             </div>
         </div>
-        <div class="view-chat-footer fixed-bottom">
-            <div class="emoji-icon"><font-awesome-icon icon="smile" class="smile-icon"/></div>
-            <input class="input-message" type="text" name="text" placeholder="Type your message"/>
-            <div class="emoji-icon"><font-awesome-icon icon="paperclip" class="smile-icon"/></div>
-            <div class="emoji-icon"><font-awesome-icon icon="microphone" class="mic-icon"/></div>
+        <div class="fixed-bottom bg-black">
+            <div class="view-chat-footer ">
+                <div class="emoji-icon"><font-awesome-icon icon="smile" class="smile-icon"/></div>
+                <input class="input-message" type="text" name="text" placeholder="Type your message"/>
+                <div class="emoji-icon"><font-awesome-icon icon="paperclip" class="smile-icon"/></div>
+                <div class="emoji-icon"><font-awesome-icon icon="microphone" class="mic-icon"/></div>
+            </div>
         </div>
 
     </div>

@@ -14,14 +14,14 @@
                     </div>
                 </div>
                 <div class="view-chat-head-right">
-                    <div class="call-nav">
+                    <!-- <div class="call-nav">
                         <font-awesome-icon icon="video" class="search"/>
-                    </div>
+                    </div> -->
                     <div class="call-nav">
                         <font-awesome-icon icon="phone-alt" class="search"/>
                     </div>
                     <div class="option-nav">
-                        <font-awesome-icon icon="ellipsis-v" class="search"/>
+                        <router-link to="Settings"><font-awesome-icon icon="ellipsis-v" class="search"/></router-link>
                     </div>
                 </div>
             </div>
@@ -55,11 +55,13 @@
 
             </div>
         </div>
-        <div class="view-chat-footer fixed-bottom">
-            <div class="emoji-icon"><font-awesome-icon icon="smile" class="smile-icon"/></div>
-            <input class="input-message" type="text" name="text" placeholder="Type your message"/>
-            <div class="emoji-icon"><font-awesome-icon icon="paperclip" class="smile-icon"/></div>
-            <div class="emoji-icon"><font-awesome-icon icon="microphone" class="mic-icon"/></div>
+        <div class="fixed-bottom bg-black">
+            <div class="view-chat-footer ">
+                <div class="emoji-icon"><font-awesome-icon icon="smile" class="smile-icon"/></div>
+                <input class="input-message" type="text" name="text" placeholder="Type your message"/>
+                <div class="emoji-icon"><font-awesome-icon icon="paperclip" class="smile-icon"/></div>
+                <div class="emoji-icon"><font-awesome-icon icon="microphone" class="mic-icon"/></div>
+            </div>
         </div>
 
     </div>

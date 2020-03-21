@@ -5,7 +5,7 @@
         <div class="chat-with">Chat with friend in every school, <br>share moments, share contents.</div>
         <div class="login-click">
             <img src="../../assets/images/call.svg">
-            <router-link to="Verify"><button class="login-btn">Login with Phone Number</button></router-link>
+            <router-link to="Verify"><button class="login-btn">Login with Email</button></router-link>
         </div>
         <div></div>
     </div>

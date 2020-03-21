@@ -96,7 +96,7 @@ body{
     padding: 0;
     font-family: 'Avenir LT Std 55 Roman';
 }
-.create_group_input,.input-message,.input-atm-card,.input-manufacturer,.input-email,.card-pin-input,.expiry-input,.addcard-input,.input-location,.verify-input-location,.verify-input,.verify-input2,.form-input,select,textarea,button,.form-control,.input-field:focus,.input-field:active {
+b-button,.create_group_input,.input-message,.input-atm-card,.input-manufacturer,.input-email,.card-pin-input,.expiry-input,.addcard-input,.input-location,.verify-input-location,.verify-input,.verify-input2,.form-input,select,textarea,button,.form-control,.input-field:focus,.input-field:active {
     outline:0px !important;
     -webkit-appearance:none!important;
     border-color: transparent;
@@ -108,6 +108,12 @@ a{
 }
 a:hover, a:focus, a:active{
     text-decoration: none;
+}
+.m-t-5{
+    margin-top: 5rem;
+}
+.m-t-4{
+    margin-top: 4.3rem;
 }
 .bounce-1 {
     animation-name: bounce-1;
@@ -180,30 +186,31 @@ a:hover, a:focus, a:active{
 
 }
 .gchat-verify-inner{
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 
 }
 .verify-title {
     color: #ffffff;
-    padding: 1.7rem 0;
+    padding: 1.5rem 0;
 }
 .verify-title h3{
     font-size: 25px;
     font-family: 'Avenir LT Std 65 Medium';
 }
 .verify-title p{
-    font-size: 17px;
+    font-size: 15px;
+    margin-bottom: 0;
     font-family: 'Avenir LT Std 55 Roman';
 }
 .verify-input{
     border: none;
     background: rgba(255,255,255,0.5);
     border-radius: 35px;
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 17px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .verify-input::placeholder{
     color: #ffffff;
@@ -214,22 +221,22 @@ a:hover, a:focus, a:active{
     background: #FFFFFF;
     border-radius: 35px;
     font-family: Montserrat-Medium;
-    font-size: 20px;
+    font-size: 17px;
     color: #454EAF;
     letter-spacing: 0;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
 }
 .verify-footer{
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 .head-section{
     display: flex;
     justify-content: space-between;
     color: #ffffff;
     background: #4850B1;
-    padding: 2rem 1rem 0.6rem;
+    padding: 1rem 1rem 0.6rem;
     width: 100%;
 }
 .gchat-logo{
@@ -253,6 +260,14 @@ a:hover, a:focus, a:active{
     padding-top: 8px;
     font-size: 18px;
 }
+.search-nav a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.search-nav a:hover, .search-nav a:active,.search-nav a:focus{
+    text-decoration: none;
+    color: #ffffff;
+}
 .chatroom-body{
     background: #F1F1F1;
     height: 100vh;
@@ -260,6 +275,7 @@ a:hover, a:focus, a:active{
     scroll-behavior: smooth;
     padding: 2rem 0;
     margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -407,6 +423,9 @@ a:hover, a:focus, a:active{
     padding-top: 8px;
     font-size: 18px;
 }
+.bg-black{
+    background: #000000;
+}
 .view-chat-body{
     background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../../assets/images/bg.jpg) center no-repeat;
     /*background: url("../../assets/images/bg.jpg");*/
@@ -414,7 +433,7 @@ a:hover, a:focus, a:active{
     height: 92vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
     margin-top: 4rem;
 }
 .view-chat-footer{
@@ -425,7 +444,7 @@ a:hover, a:focus, a:active{
     text-align: center;
     background: #FFFFFF;
     border-radius: 27px;
-    margin: 1rem 0.5rem;
+    margin: 0.3rem 0.5rem;
 }
 .smile-icon{
     color: #B8B8B8;
@@ -527,9 +546,22 @@ a:hover, a:focus, a:active{
     font-family: Avenir-Roman;
     font-size: 18px;
     color: #000000;
+    text-align: left;
     letter-spacing: 0;
     margin-left: 2rem;
 }
+.privacy_option{
+    font-family: Avenir-Roman;
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+    letter-spacing: 0;
+    margin-left: 2rem;
+}
+.option_button{
+    width: 100%;
+}
+
 
 .create-group-page{
     display: flex;
@@ -781,3 +813,32 @@ a:hover, a:focus, a:active{
     margin-bottom: 1rem;
     margin-right: 0.5rem;
 }
+
+.notify_switch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notify_switch .switch_doggle{
+    margin-left: auto;
+}
+
+.accordion-caret:active, .accordion-caret:focus {
+    /* background-image: linear-gradient(to top right, transparent 50%, #727272 50%);
+    width: 0.5rem;
+    height: 0.5rem; */
+    transform: rotate(45deg);
+  }
+  .accordion_dropdown{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: left;
+    width: 100%;
+    padding: 0.5rem 1.5rem !important;
+    background: #ffffff !important;
+    margin-bottom: 5px;
+  }
+  .faq_small_text{
+    font-size: 12px !important;
+  }

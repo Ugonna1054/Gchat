@@ -6,7 +6,7 @@
                     <img src="../../assets/images/gchat-icon.svg" >
                 </div>
                 <div class="head-title">
-                    Chatroom
+                    Contacts
                 </div>
                 <div class="search-nav">
                     <router-link to="Search"><font-awesome-icon icon="search" class="search mr-2"/></router-link>
@@ -16,11 +16,27 @@
         </div>
         <div class="chatroom-body">
             <div class="container">
-                <div class="advert">
-                    <div class="adverts">Advert Placement</div>
-                </div>
+                <router-link to="CreateGroup"><div class="chats-area">
+                    <div class="user-img">
+                        <img src="../../assets/images/group_icon.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Create Group</h5>
+                        </div>
+                    </div>
+                </div></router-link>
+                <router-link to="AddContact"><div class="chats-area">
+                    <div class="user-img">
+                        <img src="../../assets/images/user_icon.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Add Contact</h5>
+                        </div>
+                    </div>
+                </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
@@ -29,14 +45,9 @@
                             <h5>Lucy Williams</h5>
                             <p>Okey Cool, I am sending in a while</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
-                        </div>
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user2.png" >
                     </div>
@@ -45,14 +56,9 @@
                             <h5>George Okezie</h5>
                             <p>Did you see him?</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
-                        </div>
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user3.png" >
                     </div>
@@ -61,14 +67,9 @@
                             <h5>Metu Stanley</h5>
                             <p>How far na?</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
-                        </div>
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user5.png" >
                     </div>
@@ -77,14 +78,9 @@
                             <h5>Ebenezer Ndukwe</h5>
                             <p>Testing 1 2 3</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
-                        </div>
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user4.png" >
                     </div>
@@ -93,14 +89,9 @@
                             <h5>Amaka Unizik</h5>
                             <p>Okey Cool, I am sending in a while</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
-                        </div>
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
@@ -109,9 +100,17 @@
                             <h5>Stella Uniport</h5>
                             <p>I am doing great. How is school life?</p>
                         </div>
-                        <div class="time-count">
-                            <div class="time">2m</div>
-                            <div class="chat-count">2</div>
+                        
+                    </div>
+                </div></router-link>
+                <router-link to="View"><div class="chats-area">
+                    <div class="user-img">
+                        <img src="../../assets/images/user4.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Amaka Unizik</h5>
+                            <p>Okey Cool, I am sending in a while</p>
                         </div>
                     </div>
                 </div></router-link>
@@ -119,7 +118,7 @@
         </div>
         <div class="chatroom-footer fixed-bottom">
             <router-link to="Contacts"><div class="chat">
-                <font-awesome-icon icon="user" class="fontawesom "/>
+                <font-awesome-icon icon="user" class="fontawesom active1"/>
             </div></router-link>
             <router-link to=""><div class="chat">
                 <font-awesome-icon icon="phone-alt" class="fontawesom"/>
@@ -141,7 +140,7 @@
 
 <script>
     export default {
-        name: "Chatroom.vue"
+        name: "Contacts.vue"
     }
 </script>
 

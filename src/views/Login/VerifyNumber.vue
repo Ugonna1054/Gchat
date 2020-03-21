@@ -1,6 +1,6 @@
 <template>
-    <div class="gchat-verify">
-        <div class="gchat-verify-inner container">
+    <div class="gchat-verify container">
+        <div class="gchat-verify-inner ">
             <div class="back-btn">
                 <a @click="$router.go(-1)"><img src="../../assets/images/back-btn.svg" ></a>
             </div>
@@ -10,7 +10,7 @@
                 <p>An activation code will be sent to you<br> for verification.</p>
             </div>
             <div class="verify-number">
-                <input class="verify-input"  type="text" name="text" placeholder="Activation Code" required>
+                <input class="verify-input"  type="tel" name="tel" placeholder="Activation Code" required>
                 <router-link to="Username"><button class="verify-btn" >Verify Code</button></router-link>
             </div>
         </div>

@@ -21,6 +21,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
+    "vue-country-region-select": "^2.0.13",
     "vue-router": "^3.0.1",
     "vue-switches": "^2.0.1"
   },

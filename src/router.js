@@ -15,6 +15,12 @@ import CreateGroup from './views/Groupchat/CreateGroup.vue'
 import SelectMembers from './views/Groupchat/SelectMembers.vue'
 import GroupInfo from './views/Groupchat/GroupInfo.vue'
 import Settings from './views/Settings/Settings.vue'
+import Privacy from './views/Settings/Privacy.vue'
+import Chat from './views/Settings/Chat.vue'
+import Help from './views/Settings/Help.vue'
+import Contacts from './views/Contacts/Contacts.vue'
+import AddContact from './views/Contacts/AddContact.vue'
+import Search from './views/Contacts/Search.vue'
 
 
 Vue.use(Router)
@@ -91,6 +97,36 @@ export default new Router({
           name: 'Settings',
           component: Settings
       },
+      {
+        path: '/Privacy',
+        name: 'Privacy',
+        component: Privacy
+    },
+    {
+        path: '/Chat',
+        name: 'Chat',
+        component: Chat
+    },
+    {
+        path: '/Help',
+        name: 'Help',
+        component: Help
+    },
+    {
+        path: '/Contacts',
+        name: 'Contacts',
+        component: Contacts
+    },
+    {
+        path: '/AddContact',
+        name: 'AddContact',
+        component: AddContact
+    },
+    {
+        path: '/Search',
+        name: 'Search',
+        component: Search
+    },
     {
       path: '/home',
       name: 'home',

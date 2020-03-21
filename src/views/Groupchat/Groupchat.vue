@@ -9,7 +9,8 @@
                     Group
                 </div>
                 <div class="search-nav">
-                    <font-awesome-icon icon="search" class="search"/>
+                    <router-link to="Search"><font-awesome-icon icon="search" class="search mr-2"/></router-link>
+                    <router-link to="Settings"><font-awesome-icon icon="ellipsis-v" class="search ml-3"/></router-link>
                 </div>
             </div>
         </div>
@@ -108,13 +109,13 @@
             </div>
         </div>
         <div class="chatroom-footer fixed-bottom">
-            <router-link to="Chatroom"><div class="chat">
-                <font-awesome-icon icon="comment-alt" class="fontawesom "/>
+            <router-link to="Contacts"><div class="chat">
+                <font-awesome-icon icon="user" class="fontawesom "/>
             </div></router-link>
             <router-link to=""><div class="chat">
                 <font-awesome-icon icon="phone-alt" class="fontawesom"/>
             </div></router-link>
-            <router-link to="CreateGroup"><div class="start-chat">
+            <router-link to="Chatroom"><div class="start-chat">
                 <font-awesome-icon icon="comment-alt" class="start-chat-icon"/>
             </div></router-link>
             <router-link to="Groupchat"><div class="chat">
