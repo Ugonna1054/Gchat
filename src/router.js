@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Splash from './views/Splash/Splash.vue'
 import Login from './views/Login/Login.vue'
+import LoginUser from './views/Login/LoginUser.vue'
 import Verify from './views/Login/Verify.vue'
 import VerifyNumber from './views/Login/VerifyNumber.vue'
 import Username from './views/Login/Username.vue'
@@ -37,6 +38,11 @@ export default new Router({
           name: 'Login',
           component: Login
       },
+      {
+        path: '/LoginUser',
+        name: 'LoginUser',
+        component: LoginUser
+    },
       {
           path: '/Verify',
           name: 'Verify',

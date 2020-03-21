@@ -6,13 +6,13 @@
             </div>
 
             <div class="verify-title">
-                <h3>Hi, we need your email to get started.</h3>
-                <p>A activation code will be sent to your email for verification.</p>
+                <h3>Hi, Welcome back.</h3>
+                <p>Kindly enter your email and password.</p>
             </div>
             <div class="verify-number">
-                <input class="verify-input"  type="text" name="text" placeholder="First and Last Name" required>
-                <input class="verify-input"  type="text" name="text" placeholder="E.g email@email.com" required>
-                <router-link to="VerifyNumber"><button class="verify-btn" >Verify Email</button></router-link>
+                <input class="verify-input"  type="email" name="email" placeholder="email@email.com" required>
+                <input class="verify-input"  type="password" name="password" placeholder="****" required>
+                <router-link to="VerifyNumber"><button class="verify-btn" >Login</button></router-link>
             </div>
         </div>
     </div>
