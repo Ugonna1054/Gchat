@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 //new additions - refactored bootstrap vue import
+import store from "./store/store";
 import "./utils/bootstrap-vue/bootstrap-vue";
 import "./utils/vue-toastr/toastr";
 import "./utils/vee-validate/vee-validate";
@@ -27,6 +28,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
     Switches,
   render: h => h(App)
 }).$mount('#app')

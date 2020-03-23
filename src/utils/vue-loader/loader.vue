@@ -6,7 +6,7 @@
       :text="loadingText"
       size="45"
       spinner="bar-fade-scale"
-      color="#14899b"
+      color="#454EAF"
     />
   </div>
 </template>

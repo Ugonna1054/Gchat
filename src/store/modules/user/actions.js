@@ -2,14 +2,15 @@ import { userService } from "../../../services/user.services";
 import { ApiService } from "../../../services/api.services";
 
 const actions = {
-  LOGIN: async ({ commit, dispatch }, { email, password }) => {
+  LOGIN: async ({ commit, dispatch }, { username, password }) => {
     // eslint-disale-next-line prettier/prettier
     return await userService
-      .Login(email, password)
+      .Login(username, password)
       .then(async res => {
         let token = res.token;
         commit("SET_AUTH_TOKEN", res.token);
         commit("SET_IS_AUTHENTICATED", true);
+        //localStorage.setItem("isAuthenticated", true)
         commit("SET_IS_ADMIN", res.isAdmin);
         ApiService.setHeader(token);
         let authorize = await dispatch("AUTHORISE_USER", token);
@@ -28,7 +29,7 @@ const actions = {
     return await userService
       .Authorize(token)
       .then(res => {
-        window.console.log("user_data", res);
+       // window.console.log("user_data", res);
         commit("SET_USER_DATA", res);
         return true;
       })

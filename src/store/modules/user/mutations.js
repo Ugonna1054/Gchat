@@ -1,4 +1,7 @@
 const mutations = {
+  SET_USER_EMAIL(state, payload) {
+    state.USER_EMAIL = payload;
+  },
   SET_USER_DATA(state, payload) {
     state.USER_DATA = payload;
   },

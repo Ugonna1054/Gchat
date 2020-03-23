@@ -3,6 +3,7 @@ import { mutations } from "./mutations";
 import { actions } from "./actions";
 
 const state = {
+  USER_EMAIL:"",
   USER_DATA: {},
   AUTH_TOKEN: "",
   IS_ADMIN: false,

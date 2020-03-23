@@ -8,5 +8,5 @@ Vue.use(VueToastr, {
   defaultProgressBarValue: 0,
   defaultPosition: "toast-top-right",
   defaultCloseOnHover: false,
-  defaultClassNames: ["animated", "zoomInUp"]
+  defaultClassNames: ["animated", "fadeIn"]
 });

@@ -16,8 +16,19 @@
 </template>
 
 <script>
+import {mapState} from "vuex"
     export default {
-        name: "Login.vue"
+        name: "Login",
+        computed  : {
+            ...mapState({
+                IS_AUTHENTICATED : state => state.User.IS_AUTHENTICATED
+            })
+        },
+        mounted () {
+            if (this.IS_AUTHENTICATED) {
+                return this.$router.push("/Contacts")
+            }
+        }
     }
 </script>
 

@@ -2,10 +2,39 @@ import { ApiService } from "./api.services";
 
 const userService = {
     //Signup
-    Signup: (username, password, school, department, country, phone, region) => {
+    SignupStart: ({username, email}) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/users", {
                 username,
+                email
+            })
+            .then(({ data }) => {
+                resolve(data);
+            })
+            .catch(error => {
+                reject(error.response.data);
+             });
+        });
+    },
+
+    //Verify email
+    VerifyEmail: (code) => {
+        return new Promise(function (resolve, reject) {
+            ApiService.get(`/users/verify/${code}`)
+            .then(({ data }) => {
+                resolve(data);
+            })
+            .catch(error => {
+                reject(error.response.data);
+             });
+        });
+    },
+
+    //Signup End
+    SignupEnd: ({password, email,  school, department, country, phone, region, name}) => {
+        return new Promise(function (resolve, reject) {
+            ApiService.put(`/users/update/profile/${email}`, {
+                name,
                 password,
                 school,
                 department,
@@ -23,10 +52,10 @@ const userService = {
     },
 
     //Login 
-    Login: (email, password) => {
+    Login: (username, password) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/auth/login", {
-                email,
+                username,
                 password
             })
                 .then(({ data }) => {
