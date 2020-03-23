@@ -96,7 +96,7 @@ body{
     padding: 0;
     font-family: 'Avenir LT Std 55 Roman';
 }
-b-button,.create_group_input,.input-message,.input-atm-card,.input-manufacturer,.input-email,.card-pin-input,.expiry-input,.addcard-input,.input-location,.verify-input-location,.verify-input,.verify-input2,.form-input,select,textarea,button,.form-control,.input-field:focus,.input-field:active {
+.edit_username, b-button,.create_group_input,.input-message,.input-atm-card,.input-manufacturer,.input-email,.card-pin-input,.expiry-input,.addcard-input,.input-location,.verify-input-location,.verify-input,.verify-input2,.form-input,select,textarea,button,.form-control,.input-field:focus,.input-field:active {
     outline:0px !important;
     -webkit-appearance:none!important;
     border-color: transparent;
@@ -362,7 +362,7 @@ a:hover, a:focus, a:active{
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #FF0000;
+    background: #9B9B9B;
     border: 1px solid #FFFFFF;
     position: absolute;
     z-index: 1;
@@ -421,6 +421,10 @@ a:hover, a:focus, a:active{
     align-items: center;
     width: 30%;
     justify-content: flex-end;
+}
+.view-chat-head-right a{
+    text-decoration: none;
+    color: #ffffff;
 }
 .call-nav{
     padding-right: 1.5rem;
@@ -549,6 +553,14 @@ a:hover, a:focus, a:active{
     align-items: center;
     width: 100%;
     padding: 1rem 1.5rem;
+    background: #ffffff;
+    margin-bottom: 5px;
+}
+.notification_settings{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5rem;
     background: #ffffff;
     margin-bottom: 5px;
 }
@@ -811,9 +823,9 @@ a:hover, a:focus, a:active{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0;
     background: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .add-members img{
     /*position: fixed;*/
@@ -828,6 +840,7 @@ a:hover, a:focus, a:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .notify_switch .switch_doggle{
     margin-left: auto;
@@ -852,3 +865,29 @@ a:hover, a:focus, a:active{
   .faq_small_text{
     font-size: 12px !important;
   }
+
+  .edit_profile_btn{
+      background: none;
+      border: none;
+      color: #ffffff;
+  }
+  .edit_profile_btn:hover, .edit_profile_btn:focus, .edit_profile_btn:active{
+    background: none;
+    border: none;
+    color: #ffffff;
+    opacity: 0.8;
+}
+.edit_user_details{
+    width: 100%;
+    margin-left: 2rem;
+}
+.edit_username{
+    font-family: Avenir-Roman;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    letter-spacing: 0;
+    width: 100%;
+    resize: none;
+    border-bottom: 1px solid #333333;
+}

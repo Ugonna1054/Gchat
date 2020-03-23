@@ -8,12 +8,12 @@
                             <font-awesome-icon icon="angle-left" class="search"/>
                         </div></a>
                         <div class="head-user-title">
-                            My Profile
+                            Edit Profile
                         </div>
                     </div>
                 </div>
                 <div class="view-chat-head-right">
-                    <router-link to="EditProfile"> <button class="edit_profile_btn">Edit Profile</button></router-link>
+                    <button class="edit_profile_btn">Save Profile</button>
                 </div>
             </div>
         </div>
@@ -30,37 +30,39 @@
             </div>
 
             <div class="settings-categories">
-                <div class="settings_title">
-                    Settings
-                </div>
-                <div class="setting_category">
-                    <router-link to="Privacy"><div class="privacy_settings">
+                <div class="setting_category mt-1">
+                    <div class="privacy_settings">
                         <div class="icon">
-                            <img src="../../assets/images/icons/lock.svg" alt="Privacy">
+                            <font-awesome-icon icon="user"/>
                         </div>
-                        <div class="privacy_">Privacy Settings</div>
-                    </div></router-link>
-                    <router-link to="Chat"><div class="privacy_settings">
+                        <div class="edit_user_details">
+                            <input type="text" class="edit_username" value="George Okezie">
+                        </div>
+                    </div>
+                    <div class="privacy_settings">
                         <div class="icon">
-                            <img src="../../assets/images/icons/chat.svg" alt="Chat Settings">
+                            <font-awesome-icon icon="user-alt"/>
                         </div>
-                        <div class="privacy_">Chat Settings</div>
-                    </div></router-link>
-                    <div ><div class="notification_settings">
+                        <div class="edit_user_details">
+                            <input type="text" class="edit_username" placeholder="I communicate with GChat.">
+                        </div>
+                    </div>
+                    <div class="privacy_settings">
                         <div class="icon">
-                            <img src="../../assets/images/icons/bell.svg" alt="Notification">
+                            <font-awesome-icon icon="phone-alt"/>
                         </div>
-                        <div class="notify_switch">
-                            <div class="privacy_ mr-auto">Notification</div>
-                            <switches v-model="enabled" color="blue" type-bold="false" class="switch_doggle"></switches>
+                        <div class="edit_user_details">
+                            <input type="text" class="edit_username" value="08083871580">
                         </div>
-                    </div></div>
-                    <router-link to="Help"><div class="privacy_settings">
+                    </div>
+                    <div class="privacy_settings">
                         <div class="icon">
-                            <img src="../../assets/images/icons/help.svg" alt="Need Help?">
+                            <font-awesome-icon icon="envelope"/>
                         </div>
-                        <div class="privacy_">Need Help?</div>
-                    </div></router-link>
+                        <div class="edit_user_details">
+                            <input type="text" class="edit_username" value="email@mail.com">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -88,12 +90,11 @@
 </template>
 
 <script>
-    import Switches from 'vue-switches';
 
     export default {
-        name: "Settings.vue",
+        name: "EditProfile.vue",
         components: {
-            Switches
+            
         },
         data() {
             return {

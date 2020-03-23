@@ -54,7 +54,7 @@
                             <a href="tel:+234800000000"><div class="mute-text">+23480 000 0000</div></a>
                         </div>
                         <div class="phone-video-icon">
-                            <a href="tel:+234800000000"><img src="../../assets/images/icons/video.svg" alt="Chat Settings"></a>
+                            <!-- <a href="tel:+234800000000"><img src="../../assets/images/icons/video.svg" alt="Chat Settings"></a> -->
                             <a href="tel:+234800000000"><img src="../../assets/images/icons/call.svg" alt="Chat Settings"></a>
                         </div>
                     </div>

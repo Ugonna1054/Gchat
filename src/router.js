@@ -16,6 +16,7 @@ import CreateGroup from './views/Groupchat/CreateGroup.vue'
 import SelectMembers from './views/Groupchat/SelectMembers.vue'
 import GroupInfo from './views/Groupchat/GroupInfo.vue'
 import Settings from './views/Settings/Settings.vue'
+import EditProfile from './views/Settings/EditProfile.vue'
 import Privacy from './views/Settings/Privacy.vue'
 import Chat from './views/Settings/Chat.vue'
 import Help from './views/Settings/Help.vue'
@@ -103,6 +104,11 @@ export default new Router({
           name: 'Settings',
           component: Settings
       },
+      {
+        path: '/EditProfile',
+        name: 'EditProfile',
+        component: EditProfile
+    },
       {
         path: '/Privacy',
         name: 'Privacy',
