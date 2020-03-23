@@ -20,7 +20,7 @@
                     <div class="adverts">Advert Placement</div>
                 </div>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
@@ -36,7 +36,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user2.png" >
                     </div>
@@ -52,7 +52,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user3.png" >
                     </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user5.png" >
                     </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user4.png" >
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
-                    <div class="status-sign"></div>
+                    <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
