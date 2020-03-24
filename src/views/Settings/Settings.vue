@@ -56,6 +56,18 @@
                             <switches v-model="enabled" color="blue" type-bold="false" class="switch_doggle"></switches>
                         </div>
                     </div></div>
+                    <router-link to="EditProfile"><div class="privacy_settings">
+                        <div class="icon">
+                            <font-awesome-icon icon="user" class="user_setting_icon "/>
+                        </div>
+                        <div class="privacy_">Edit Profile</div>
+                    </div></router-link>
+                    <router-link to="Password"><div class="privacy_settings">
+                        <div class="icon">
+                            <img src="../../assets/images/icons/lock.svg" alt="Password">
+                        </div>
+                        <div class="privacy_">Change Password</div>
+                    </div></router-link>
                     <router-link to="Help"><div class="privacy_settings">
                         <div class="icon">
                             <img src="../../assets/images/icons/help.svg" alt="Need Help?">

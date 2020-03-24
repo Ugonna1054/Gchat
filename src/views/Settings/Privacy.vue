@@ -122,6 +122,10 @@
     .btn{
         padding: 0;
     }
-    
+
+    .settings-categories {
+    padding-bottom: 5rem;
+    height: 85vh;
+}
 
 </style>

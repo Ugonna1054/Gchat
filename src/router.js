@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 import Splash from './views/Splash/Splash.vue'
 import Login from './views/Login/Login.vue'
 import LoginUser from './views/Login/LoginUser.vue'
@@ -17,12 +16,14 @@ import SelectMembers from './views/Groupchat/SelectMembers.vue'
 import GroupInfo from './views/Groupchat/GroupInfo.vue'
 import Settings from './views/Settings/Settings.vue'
 import EditProfile from './views/Settings/EditProfile.vue'
+import Password from './views/Settings/Password.vue'
 import Privacy from './views/Settings/Privacy.vue'
 import Chat from './views/Settings/Chat.vue'
 import Help from './views/Settings/Help.vue'
 import Contacts from './views/Contacts/Contacts.vue'
 import AddContact from './views/Contacts/AddContact.vue'
 import Search from './views/Contacts/Search.vue'
+import Call from './views/Call/Call.vue'
 
 
 Vue.use(Router)
@@ -109,6 +110,11 @@ export default new Router({
         name: 'EditProfile',
         component: EditProfile
     },
+    {
+        path: '/Password',
+        name: 'password',
+        component: Password
+    },
       {
         path: '/Privacy',
         name: 'Privacy',
@@ -140,9 +146,9 @@ export default new Router({
         component: Search
     },
     {
-      path: '/home',
-      name: 'home',
-      component: Home
+      path: '/Call',
+      name: 'Call',
+      component: Call
     },
     {
       path: '/about',

@@ -169,7 +169,7 @@
             <router-link to="Contacts"><div class="chat">
                 <font-awesome-icon icon="user" class="fontawesom "/>
             </div></router-link>
-            <router-link to=""><div class="chat">
+            <router-link to="Call"><div class="chat">
                 <font-awesome-icon icon="phone-alt" class="fontawesom"/>
             </div></router-link>
             <router-link to="Chatroom">

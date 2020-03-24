@@ -9,19 +9,19 @@
                     <router-link to="Profile"><div class="user-img2">
                         <img src="../../assets/images/user1.png" >
                     </div></router-link>
-                    <div class="head-user-title">
+                    <router-link to="Profile"><div class="head-user-title">
                         Lucy Williams
-                    </div>
+                    </div></router-link>
                 </div>
                 <div class="view-chat-head-right">
                     <!-- <div class="call-nav">
                         <font-awesome-icon icon="video" class="search"/>
                     </div> -->
-                    <div class="call-nav">
+                    <router-link to="Call"><div class="call-nav">
                         <font-awesome-icon icon="phone-alt" class="search"/>
-                    </div>
+                    </div></router-link>
                     <div class="option-nav">
-                        <router-link to="Settings"><font-awesome-icon icon="ellipsis-v" class="search"/></router-link>
+                        <router-link to="Profile"><font-awesome-icon icon="ellipsis-v" class="search"/></router-link>
                     </div>
                 </div>
             </div>

@@ -37,6 +37,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
@@ -48,6 +49,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user2.png" >
                     </div>
@@ -59,6 +61,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user3.png" >
                     </div>
@@ -70,6 +73,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user5.png" >
                     </div>
@@ -81,6 +85,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user4.png" >
                     </div>
@@ -92,6 +97,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user1.png" >
                     </div>
@@ -104,6 +110,7 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user4.png" >
                     </div>
@@ -120,7 +127,7 @@
             <router-link to="Contacts"><div class="chat">
                 <font-awesome-icon icon="user" class="fontawesom active1"/>
             </div></router-link>
-            <router-link to=""><div class="chat">
+            <router-link to="Call"><div class="chat">
                 <font-awesome-icon icon="phone-alt" class="fontawesom"/>
             </div></router-link>
             <router-link to="Chatroom">

@@ -126,14 +126,6 @@
               />
             </div>
           </div>
-          <!-- <div class="privacy_settings">
-                        <div class="icon">
-                            <font-awesome-icon icon="lock"/>
-                        </div>
-                        <div class="edit_user_details">
-                            <input type="password" class="edit_username" value="******">
-                        </div>
-          </div>-->
         </div>
       </div>
     </div>

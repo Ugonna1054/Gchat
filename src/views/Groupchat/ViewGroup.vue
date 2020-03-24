@@ -9,12 +9,12 @@
                     <router-link to="GroupInfo"><div class="user-img2">
                         <img src="../../assets/images/user6.png" >
                     </div></router-link>
-                    <div class="head-user-title">
+                    <router-link to="GroupInfo"><div class="head-user-title">
                         Lagos Eko
-                    </div>
+                    </div></router-link>
                 </div>
                 <div class="view-chat-head-right">
-                    <router-link to="Settings"><div class="option-nav">
+                    <router-link to="GroupInfo"><div class="option-nav">
                         <font-awesome-icon icon="ellipsis-v" class="search"/>
                     </div></router-link>
                 </div>
