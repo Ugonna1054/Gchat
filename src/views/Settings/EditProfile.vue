@@ -136,7 +136,7 @@
           <font-awesome-icon icon="user" class="fontawesom" />
         </div>
       </router-link>
-      <router-link to>
+      <router-link to="Call">
         <div class="chat">
           <font-awesome-icon icon="phone-alt" class="fontawesom" />
         </div>
