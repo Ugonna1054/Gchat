@@ -1,19 +1,19 @@
 import { ApiService } from "./api.services";
 
 const userService = {
-    //Signup
-    SignupStart: ({username, email}) => {
+    //Signup start
+    SignupStart: ({ username, email }) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/users", {
                 username,
                 email
             })
-            .then(({ data }) => {
-                resolve(data);
-            })
-            .catch(error => {
-                reject(error.response.data);
-             });
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
         });
     },
 
@@ -21,17 +21,17 @@ const userService = {
     VerifyEmail: (code) => {
         return new Promise(function (resolve, reject) {
             ApiService.get(`/users/verify/${code}`)
-            .then(({ data }) => {
-                resolve(data);
-            })
-            .catch(error => {
-                reject(error.response.data);
-             });
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
         });
     },
 
     //Signup End
-    SignupEnd: ({password, email,  school, department, country, phone, region, name}) => {
+    SignupEnd: ({ password, email, school, department, country, phone, region, name }) => {
         return new Promise(function (resolve, reject) {
             ApiService.put(`/users/update/profile/${email}`, {
                 name,
@@ -42,12 +42,12 @@ const userService = {
                 region,
                 phone
             })
-            .then(({ data }) => {
-                resolve(data);
-            })
-            .catch(error => {
-                reject(error.response.data);
-             });
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
         });
     },
 
@@ -93,7 +93,29 @@ const userService = {
             .catch(error => {
                 return Promise.reject(error.response.data);
             });
-    }
+    },
+
+    //Update Profile
+    UpdateProfile: ({ email, username, school, department, country, phone, region, about }) => {
+        return new Promise(function (resolve, reject) {
+            ApiService.put(`/users/update`, {
+                about,
+                email,
+                username,
+                school,
+                department,
+                country,
+                region,
+                phone
+            })
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
+        });
+    },
 };
 
 export { userService };

@@ -68,6 +68,54 @@
                     </div>
                 </div></router-link>
                 <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
+                    <div class="user-img">
+                        <img src="../../assets/images/user3.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Metu Stanley</h5>
+                            <p>How far na?</p>
+                        </div>
+                        <div class="time-count">
+                            <div class="time">2m</div>
+                            <div class="chat-count">2</div>
+                        </div>
+                    </div>
+                </div></router-link>
+                <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
+                    <div class="user-img">
+                        <img src="../../assets/images/user3.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Metu Stanley</h5>
+                            <p>How far na?</p>
+                        </div>
+                        <div class="time-count">
+                            <div class="time">2m</div>
+                            <div class="chat-count">2</div>
+                        </div>
+                    </div>
+                </div></router-link>
+                <router-link to="View"><div class="chats-area">
+                    <div class="status-sign-online"></div>
+                    <div class="user-img">
+                        <img src="../../assets/images/user3.png" >
+                    </div>
+                    <div class="user-name-time">
+                        <div class="user-name">
+                            <h5>Metu Stanley</h5>
+                            <p>How far na?</p>
+                        </div>
+                        <div class="time-count">
+                            <div class="time">2m</div>
+                            <div class="chat-count">2</div>
+                        </div>
+                    </div>
+                </div></router-link>
+                <router-link to="View"><div class="chats-area">
                     <div class="status-sign-offline"></div>
                     <div class="user-img">
                         <img src="../../assets/images/user5.png" >

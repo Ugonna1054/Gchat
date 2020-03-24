@@ -28,7 +28,6 @@ const ApiService = {
   delete(resource) {
     return axios.delete(resource);
   },
-
   customRequest(data) {
     return axios(data);
   }

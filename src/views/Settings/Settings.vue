@@ -24,8 +24,9 @@
                     <div class="profile_img">
                         <img src="../../assets/images/user_icon.png" >
                     </div>
-                    <div class="profile-name">George Okezie</div>
-                    <div class="profile-text">CEO @ GTONIA GROUP</div>
+                    <div class="profile-name"> {{USER.name}} </div>
+                    <div class="profile-text" v-if="USER.about"> {{USER.about}} </div>
+                    <div class="profile-text" v-else> Available </div>
                 </div>
             </div>
 
@@ -89,9 +90,10 @@
 
 <script>
     import Switches from 'vue-switches';
+    import {mapState} from "vuex";
 
     export default {
-        name: "Settings.vue",
+        name: "Settings",
         components: {
             Switches
         },
@@ -102,6 +104,11 @@
 
             }
         },
+        computed : {
+            ...mapState({
+                USER : state => state.User.USER_DATA
+            })
+        }
     }
 </script>
 
