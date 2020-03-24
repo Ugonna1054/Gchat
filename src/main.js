@@ -10,17 +10,17 @@ import "./utils/vee-validate/vee-validate";
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt )
+library.add(faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 import vueCountryRegionSelect from 'vue-country-region-select'
 Vue.use(vueCountryRegionSelect)
 
-
+// import ImagePicker from 'vue-image-picker'
 
 import Switches from 'vue-switches';
 
@@ -30,5 +30,6 @@ new Vue({
   router,
   store,
     Switches,
+    // 'image-picker': ImagePicker,
   render: h => h(App)
 }).$mount('#app')

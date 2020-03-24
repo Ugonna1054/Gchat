@@ -25,6 +25,7 @@
     "vue": "^2.6.10",
     "vue-country-region-select": "^2.0.13",
     "vue-element-loading": "^1.1.5",
+    "vue-image-picker": "0.0.1-3",
     "vue-router": "^3.0.1",
     "vue-switches": "^2.0.1",
     "vue-toastr": "^2.1.2",

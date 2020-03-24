@@ -22,7 +22,7 @@
             <div class="profile-picture-section">
                 <div class="text-center">
                     <div class="profile_img">
-                        <img src="../../assets/images/george-okezie.png" >
+                        <img src="../../assets/images/user_icon.png" >
                     </div>
                     <div class="profile-name">George Okezie</div>
                     <div class="profile-text">CEO @ GTONIA GROUP</div>
