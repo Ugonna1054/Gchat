@@ -1,9 +1,9 @@
 import axios from "axios";
 
-//https://matrixx-server.herokuapp.com/api
+//https://gchat-myapp.herokuapp.com/api
 //http://localhost:4000/api
 
-const baseUrl = "http://localhost:5000/api";
+const baseUrl = "https://gchat-myapp.herokuapp.com/api";
 axios.defaults.baseURL = baseUrl;
 
 const ApiService = {

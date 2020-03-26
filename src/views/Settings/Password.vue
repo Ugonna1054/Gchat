@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="view-chat-head-right">
-          <button class="edit_profile_btn" @click="saveProfile">Save</button>
+          <button class="edit_profile_btn" :disabled="bool" @click="ChangePassword">Save</button>
         </div>
       </div>
     </div>
@@ -29,35 +29,32 @@
       </div>
 
       <div class="settings-categories">
-          <div class="settings_title">
-                    Security Settings
-                </div>
+        <div class="settings_title">Security Settings</div>
         <div class="setting_category mt-1">
-          
-            <div class="privacy_settings">
-                <div class="icon">
-                    <font-awesome-icon icon="lock"/>
-                </div>
-                <div class="edit_user_details">
-                    <input type="password" class="edit_username" placeholder="Current Password">
-                </div>
+          <div class="privacy_settings">
+            <div class="icon">
+              <font-awesome-icon icon="lock" />
             </div>
-            <div class="privacy_settings">
-                <div class="icon">
-                    <font-awesome-icon icon="lock"/>
-                </div>
-                <div class="edit_user_details">
-                    <input type="password" class="edit_username" placeholder="New Password">
-                </div>
+            <div class="edit_user_details">
+              <input type="password" v-model="oldPassword" maxlength="6" class="edit_username" placeholder="Current Password" />
             </div>
-            <div class="privacy_settings">
-                <div class="icon">
-                    <font-awesome-icon icon="lock"/>
-                </div>
-                <div class="edit_user_details">
-                    <input type="password" class="edit_username" placeholder="Confirm Password">
-                </div>
+          </div>
+          <div class="privacy_settings">
+            <div class="icon">
+              <font-awesome-icon icon="lock" />
             </div>
+            <div class="edit_user_details">
+              <input type="password"  v-model="password" maxlength="6" class="edit_username" placeholder="New Password" />
+            </div>
+          </div>
+          <div class="privacy_settings">
+            <div class="icon">
+              <font-awesome-icon icon="lock" />
+            </div>
+            <div class="edit_user_details">
+              <input type="password" v-model ="newPassword" maxlength="6" class="edit_username" placeholder="Confirm Password" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -93,17 +90,53 @@
 </template>
 
 <script>
+import Loader from "../../utils/vue-loader/loader.vue";
+import { securityService } from "../../services/security.services";
 
 export default {
-  name: "Password.vue",
+  name: "Password",
   components: {
-    
+    Loader
   },
   data() {
     return {
-      
+      oldPassword:"",
+      password:"",
+      newPassword:"",
+      bool :true,
+      loading:false
     };
   },
+  watch : {
+    newPassword (newval) {
+      if(newval.length == 6 && this.oldPassword) {
+        if(newval !==  this.password) return this.$toastr.w("Password Mismatch");
+        this.bool = false
+      }
+    }
+  },
+  methods: {
+    async ChangePassword() {
+      this.loading = true;
+      await securityService
+        .ChangePassword({
+          oldPassword: this.oldPassword,
+          newPassword: this.newPassword,
+        })
+        .then(async () => {
+          this.$toastr.s("Updated Successfully")
+        })
+        .catch(err => {
+          this.$toastr.e(err.message || err, "Update Failed");
+        })
+        .finally(() => {
+          this.loading = false;
+          this.oldPassword ="";
+          this.password = "";
+          this.newPassword=""
+        });
+    }
+  }
 };
 </script>
 
