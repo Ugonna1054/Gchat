@@ -9,8 +9,7 @@
       </div>
 
       <div class="verify-title">
-        <h3>Hi, we need your phone number to get started.</h3>
-        <p>An activation code will be sent to you for verification.</p>
+        <h3>Welcome, we need your info to get connected</h3>
       </div>
       <div class="verify-number">
            <input
