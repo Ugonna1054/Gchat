@@ -10,10 +10,10 @@ import "./utils/vee-validate/vee-validate";
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag, faPowerOff } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag )
+library.add(faUserSecret, faSearch, faCommentAlt, faUserFriends, faPhoneAlt, faEllipsisH, faEllipsisV, faAngleLeft, faVideo, faPaperclip, faMicrophone, faSmile, faVideoSlash, faChevronDown, faCaretDown, faUser, faEnvelope, faInfo, faUserAlt, faSchool, faLock, faBookReader, faFlag, faPowerOff )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

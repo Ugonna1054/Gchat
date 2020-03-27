@@ -74,6 +74,12 @@
                         </div>
                         <div class="privacy_">Need Help?</div>
                     </div></router-link>
+                    <router-link to=""><div class="privacy_settings">
+                        <div class="icon">
+                            <font-awesome-icon icon="power-off" class="user_setting_icon "/>
+                        </div>
+                        <div class="privacy_">Log Out</div>
+                    </div></router-link>
                 </div>
             </div>
 
