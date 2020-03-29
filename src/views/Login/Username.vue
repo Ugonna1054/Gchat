@@ -12,7 +12,7 @@
         <h3>Welcome, we need your info to get connected</h3>
       </div>
       <div class="verify-number">
-           <input
+        <input
           class="verify-input"
           v-model="name"
           type="text"
@@ -38,28 +38,8 @@
         />
         <country-select v-model="country" :country="country" topCountry="NG" class="verify-input" />
         <region-select v-model="region" :country="country" :region="region" class="verify-input" />
-        <!-- <input
-          class="verify-input"
-          v-model="phone"
-          type="tel"
-          name="tel"
-          placeholder="Phone Number"
-          required
-        /> -->
-        <!-- <input
-          class="verify-input"
-          v-model="password"
-          type="password"
-          name="password"
-          placeholder="6 digit password/pin"
-          minlength = 6
-          maxlength = 6
-          required
-        /> -->
-        <!-- <input class="verify-input"  type="password" name="password" placeholder="Confirm Password" required> -->
-        <!-- <router-link to="Contacts"> -->
+
         <button @click="SignupEnd" class="verify-btn">Welcome to G.chat</button>
-        <!-- </router-link> -->
       </div>
     </div>
     <!-- <div class="verify-footer">
@@ -71,7 +51,7 @@
 <script>
 import { userService } from "../../services/user.services";
 import Loader from "../../utils/vue-loader/loader.vue";
-import {mapState} from  "vuex"
+import { mapState } from "vuex";
 export default {
   name: "Username",
   components: {
@@ -84,15 +64,13 @@ export default {
       region: null,
       school: "",
       department: "",
-      name: "",
-      phone: "",
-      password: "",
+      name: ""
     };
   },
-  computed : {
-      ...mapState({
-          email : state => state.User.USER_EMAIL
-      })
+  computed: {
+    ...mapState({
+      email: state => state.User.USER_EMAIL
+    })
   },
   methods: {
     async SignupEnd() {
@@ -104,13 +82,16 @@ export default {
           school: this.school,
           department: this.department,
           name: this.name,
-          phone: this.phone,
-          password: this.password,
           email: this.email
         })
-        .then(() => {
+        .then( async (res) => {
           this.$toastr.s("Succesfully Registered");
-          this.$router.push("/LoginUser")
+          await this.$store.dispatch("AUTHORISE_USER", res.token)
+          .then(() => {
+            this.$router.push("/Contacts");
+          })
+          .catch(() =>this.$toastr.e("Registration failed"))
+          //
         })
         .catch(err => {
           this.$toastr.e(err.message || err, "Registration Failed");

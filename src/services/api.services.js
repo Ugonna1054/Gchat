@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //https://gchat-myapp.herokuapp.com/api
-//http://localhost:4000/api
+//http://localhost:5000/api
 
 const baseUrl = "https://gchat-myapp.herokuapp.com/api";
 axios.defaults.baseURL = baseUrl;

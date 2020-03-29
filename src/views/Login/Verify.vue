@@ -57,7 +57,8 @@ export default {
     return {
       loading: false,
       username: "",
-      email: ""
+      email: "",
+      phone:"",
     };
   },
   methods: {
@@ -66,7 +67,8 @@ export default {
       await userService
         .SignupStart({
           username: this.username,
-          email: this.email
+          email: this.email,
+          phone:this.phone
         })
         .then(() => {
           this.$store.commit("SET_USER_EMAIL",  this.email)

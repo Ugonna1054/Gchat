@@ -39,6 +39,8 @@
 
 <script>
 import Loader from "../../utils/vue-loader/loader.vue";
+import { userService } from "../../services/user.services";
+
 export default {
   name: "Verify.vue",
   components: {
@@ -47,22 +49,19 @@ export default {
   data() {
     return {
       username: "",
-      password: "",
       loading: false
     };
   },
   methods: {
     async Signin() {
       this.loading = true;
-      await this.$store
-        .dispatch("LOGIN", {
-          username: this.username,
-          password: this.password
-        })
+      await userService.LoginStart(this.username)
         .then(() => {
-          this.$toastr.s("Logged in Succesfully");
-          //if (res.isAdmin) return this.$router.push("/Admin/Dashboard");
-          this.$router.push("/Contacts");
+          this.$toastr.i(
+            "An OTP has been sent to your email",
+            "Enter your OTP"
+          );
+          this.$router.push("/VerifyNumber?path=login");
         })
         .catch(err => {
           this.$toastr.e(err.message ||  err, "Login Failed!");

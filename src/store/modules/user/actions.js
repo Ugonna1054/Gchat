@@ -26,10 +26,12 @@ const actions = {
   },
 
   AUTHORISE_USER: async ({ commit }, token) => {
+    commit("SET_AUTH_TOKEN", token);
+    commit("SET_IS_AUTHENTICATED", true);
+    ApiService.setHeader(token);
     return await userService
       .Authorize(token)
       .then(res => {
-       // window.console.log("user_data", res);
         commit("SET_USER_DATA", res);
         return true;
       })

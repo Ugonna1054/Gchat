@@ -2,11 +2,12 @@ import { ApiService } from "./api.services";
 
 const userService = {
     //Signup start
-    SignupStart: ({ username, email }) => {
+    SignupStart: ({ username, email, phone }) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/users", {
                 username,
-                email
+                email,
+                phone
             })
                 .then(({ data }) => {
                     resolve(data);
@@ -31,16 +32,14 @@ const userService = {
     },
 
     //Signup End
-    SignupEnd: ({ password, email, school, department, country, phone, region, name }) => {
+    SignupEnd: ({ email, school, department, country, region, name }) => {
         return new Promise(function (resolve, reject) {
             ApiService.put(`/users/update/profile/${email}`, {
                 name,
-                password,
                 school,
                 department,
                 country,
                 region,
-                phone
             })
                 .then(({ data }) => {
                     resolve(data);
@@ -51,12 +50,11 @@ const userService = {
         });
     },
 
-    //Login 
-    Login: (username, password) => {
+    //Login Start
+    LoginStart: (username) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/auth/login", {
-                username,
-                password
+                username
             })
                 .then(({ data }) => {
                     resolve(data);
@@ -68,18 +66,15 @@ const userService = {
         });
     },
 
-    //Logout 
-    Logout: () => {
+    //Login End
+    LoginEnd: (code) => {
         return new Promise(function (resolve, reject) {
-            ApiService.customRequest({
-                method: "post",
-                url: ApiService.getBaseUrl() + "/auth/logout"
-            })
-                .then(res => {
-                    resolve(res.data.message);
+            ApiService.post(`/auth/login/verify/${code}`)
+                .then(({ data }) => {
+                    resolve(data);
                 })
-                .catch(err => {
-                    reject(err.response.data);
+                .catch(error => {
+                    reject(error.response.data);
                 });
         });
     },
