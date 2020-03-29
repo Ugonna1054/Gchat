@@ -155,7 +155,7 @@ a:hover, a:focus, a:active{
     flex-direction: column;
 }
 .chat-with{
-    font-family: FiraSans-ExtraLight;
+    font-family: 'Avenir LT Std 65 Medium Oblique';
     font-size: 20px;
     color: #FFFFFF;
     text-align: center;
@@ -168,7 +168,7 @@ a:hover, a:focus, a:active{
     padding: 10px;
 }
 .login-btn{
-    font-family: FiraSans-Light;
+    font-family: 'Avenir LT Std 65 Medium Oblique';
     font-size: 22px;
     color: #FFFFFF;
     border: none;

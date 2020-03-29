@@ -38,15 +38,15 @@
         />
         <country-select v-model="country" :country="country" topCountry="NG" class="verify-input" />
         <region-select v-model="region" :country="country" :region="region" class="verify-input" />
-        <input
+        <!-- <input
           class="verify-input"
           v-model="phone"
           type="tel"
           name="tel"
           placeholder="Phone Number"
           required
-        />
-        <input
+        /> -->
+        <!-- <input
           class="verify-input"
           v-model="password"
           type="password"
@@ -55,7 +55,7 @@
           minlength = 6
           maxlength = 6
           required
-        />
+        /> -->
         <!-- <input class="verify-input"  type="password" name="password" placeholder="Confirm Password" required> -->
         <!-- <router-link to="Contacts"> -->
         <button @click="SignupEnd" class="verify-btn">Welcome to G.chat</button>

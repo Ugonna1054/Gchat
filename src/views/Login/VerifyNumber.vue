@@ -9,11 +9,7 @@
       </div>
 
       <div class="verify-title">
-        <h3>Hi, we need your phone number to get started.</h3>
-        <p>
-          An activation code will be sent to you
-          <br />for verification.
-        </p>
+        <h3>Hi, please enter the 6 digit code that was sent to your email.</h3>
       </div>
       <div class="verify-number">
         <input class="verify-input" v-model="code" type="tel" name="tel" placeholder="Activation Code" required />

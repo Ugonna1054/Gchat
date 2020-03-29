@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="view-chat-head-right">
-          <button class="edit_profile_btn" @click="saveProfile">Save Profile</button>
+          <button class="edit_profile_btn" @click="saveProfile">Save</button>
         </div>
       </div>
     </div>
@@ -24,6 +24,16 @@
         <div class="text-center">
           <div class="profile_img">
             <img src="../../assets/images/user_icon.png" />
+            <div class="user_profile_img_upload">
+                    <!-- slot for parent component to activate the file changer -->    
+                    <div @click="launchFilePicker()">      
+                        <slot name="activator"></slot>    
+                    </div>
+                        <!-- image input: style is set to hidden and assigned a ref so that it can be triggered -->    <input type="file"       ref="file"       :name="uploadFieldName"       @change="onFileChange(          $event.target.name, $event.target.files)"       style="display:none">
+                            <!-- error dialog displays any potential errors -->    <v-dialog v-model="errorDialog" max-width="300">      <v-card>        <v-card-text class="subheading">{{errorText}}</v-card-text>        <v-card-actions>          <v-spacer></v-spacer>          <v-btn @click="errorDialog = false" flat>Got it!</v-btn>        </v-card-actions>      </v-card>    </v-dialog>
+
+
+            </div>
             <!-- <vue-image-chooser name="image-chooser" @change="uploadFile" :progress="progress" :error="error"/>
                         <div class="upload_user_image">
                             <div class="continue-button" v-if="!image">
@@ -176,9 +186,13 @@ export default {
     return {
       // switches: true,
       enabled: false,
-      loading: false
+      loading: false,
+      errorDialog: null,      errorText: '',      uploadFieldName: 'file',      maxSize: 1024
     };
   },
+      props: {          // Use "value" here to enable compatibility with v-model      value: Object,    
+      },
+
   computed: {
     ...mapState({
       USER: state => state.User.USER_DATA,

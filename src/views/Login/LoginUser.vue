@@ -10,7 +10,7 @@
 
       <div class="verify-title">
         <h3>Hi, Welcome back.</h3>
-        <p>Kindly enter your email/username and password.</p>
+        <p>Kindly enter your email to login.</p>
       </div>
       <div class="verify-number">
         <input
@@ -18,17 +18,17 @@
           type="email"
           name="email"
           v-model="username"
-          placeholder="Username or Email"
+          placeholder="Email"
           required
         />
-        <input
+        <!-- <input
           class="verify-input"
           v-model="password"
           type="password"
           name="password"
           placeholder="****"
           required
-        />
+        /> -->
         <!-- <router-link to="VerifyNumber"> -->
           <button class="verify-btn" @click="Signin">Login</button>
         <!-- </router-link> -->

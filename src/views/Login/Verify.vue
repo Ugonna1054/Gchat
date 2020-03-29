@@ -10,7 +10,7 @@
 
       <div class="verify-title">
         <h3>Hi, we need your email to get started.</h3>
-        <p>A activation code will be sent to your email for verification.</p>
+        <p>An activation code will be sent to your email for verification.</p>
       </div>
       <div class="verify-number">
         <input
@@ -27,6 +27,14 @@
           name="text"
           placeholder="E.g email@email.com"
           v-model="email"
+          required
+        />
+        <input
+          class="verify-input"
+          v-model="phone"
+          type="tel"
+          name="tel"
+          placeholder="Phone Number"
           required
         />
         <!-- <router-link to="VerifyNumber"> -->

@@ -26,7 +26,7 @@
             </div>
             <div class="create_group_buttons">
                 <input class="create_group_input"  type="text" name="text" placeholder="Name" required>
-                <router-link to="SelectMembers"><button class="create_group_btn" >Search Contact</button></router-link>
+                <router-link to=""><button class="create_group_btn" >Search Contact</button></router-link>
             </div>
             <div class="verify-footer">
                 <img src="../../assets/images/gchat-blue.svg" >
