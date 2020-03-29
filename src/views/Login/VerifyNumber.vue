@@ -25,7 +25,7 @@
         <!-- </router-link> -->
       </div>
     </div>
-    <div class="verify-footer">
+    <div class="verify-footer" @click="resendOtp" style="cursor:pointer">
       <img src="../../assets/images/resendcode.svg" />
     </div>
   </div>
@@ -34,6 +34,8 @@
 <script>
 import { userService } from "../../services/user.services";
 import Loader from "../../utils/vue-loader/loader.vue";
+import { mapState } from "vuex";
+
 export default {
   name: "VerifyNumber.vue",
   components: {
@@ -46,6 +48,9 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      email: state => state.User.USER_EMAIL
+    }),
     routeQuery() {
       return this.$route.query.path;
     }
@@ -86,6 +91,20 @@ export default {
             this.loading = false;
           });
       }
+    },
+    async resendOtp() {
+      this.loading = true;
+      await userService
+        .LoginStart(this.email)
+        .then(() => {
+          this.$toastr.i("OTP Resent Successfully", "Enter your OTP");
+        })
+        .catch(err => {
+          this.$toastr.e(err.message || err, "Login Failed!");
+        })
+        .finally(() => {
+          this.loading = false;
+        });
     }
   }
 };

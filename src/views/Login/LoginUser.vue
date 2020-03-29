@@ -57,6 +57,7 @@ export default {
       this.loading = true;
       await userService.LoginStart(this.username)
         .then(() => {
+          this.$store.commit("SET_USER_EMAIL",  this.username)
           this.$toastr.i(
             "An OTP has been sent to your email",
             "Enter your OTP"
