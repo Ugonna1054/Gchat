@@ -10,7 +10,7 @@
 
       <div class="verify-title">
         <h3>Hi, Welcome back.</h3>
-        <p>Kindly enter your email to login.</p>
+        <p>Kindly enter your email or username to login.</p>
       </div>
       <div class="verify-number">
         <input
@@ -18,7 +18,7 @@
           type="email"
           name="email"
           v-model="username"
-          placeholder="Email"
+          placeholder="Email or Username"
           required
         />
         <!-- <input
