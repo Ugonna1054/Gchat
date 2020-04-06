@@ -34,7 +34,7 @@ export default {
       if (this.IS_AUTHENTICATED) return ApiService.setHeader(this.AUTH_TOKEN);
     }
   },
-  mounted() {
+  created() {
     this.setHeader();
   }
 };

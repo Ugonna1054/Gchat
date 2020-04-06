@@ -37,7 +37,7 @@ import Loader from "../../utils/vue-loader/loader.vue";
 import { mapState } from "vuex";
 
 export default {
-  name: "VerifyNumber.vue",
+  name: "VerifyNumber",
   components: {
     Loader
   },
@@ -49,7 +49,8 @@ export default {
   },
   computed: {
     ...mapState({
-      email: state => state.User.USER_EMAIL
+      email: state => state.User.USER_EMAIL,
+      USER_DATA: state => state.User.USER_DATA
     }),
     routeQuery() {
       return this.$route.query.path;

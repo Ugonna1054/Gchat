@@ -1,176 +1,165 @@
 <template>
-    <div class="chatroom-page ">
-        <div class="fixed-top">
-            <div class="head-section">
-                <div class="gchat-logo">
-                    <img src="../../assets/images/gchat-icon.svg" >
-                </div>
-                <div class="head-title">
-                    Contacts
-                </div>
-                <div class="search-nav">
-                    <router-link to="Search"><font-awesome-icon icon="search" class="search mr-2"/></router-link>
-                    <router-link to="Settings"><font-awesome-icon icon="ellipsis-v" class="search ml-3"/></router-link>
-                </div>
-            </div>
+  <div class="chatroom-page">
+    <Loader :loading="loading" loading-text="please wait..." />
+    <div class="fixed-top">
+      <div class="head-section">
+        <div class="gchat-logo">
+          <img src="../../assets/images/gchat-icon.svg" />
         </div>
-        <div class="chatroom-body">
-            <div class="container">
-                <router-link to="CreateGroup"><div class="chats-area">
-                    <div class="user-img">
-                        <img src="../../assets/images/group_icon.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Create Group</h5>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="AddContact"><div class="chats-area">
-                    <div class="user-img">
-                        <img src="../../assets/images/user_icon.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Add Contact</h5>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-online"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user1.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Lucy Williams</h5>
-                            <p>Okey Cool, I am sending in a while</p>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-offline"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user2.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>George Okezie</h5>
-                            <p>Did you see him?</p>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-online"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user3.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Metu Stanley</h5>
-                            <p>How far na?</p>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-online"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user5.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Ebenezer Ndukwe</h5>
-                            <p>Testing 1 2 3</p>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-offline"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user4.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Amaka Unizik</h5>
-                            <p>Okey Cool, I am sending in a while</p>
-                        </div>
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-online"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user1.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Stella Uniport</h5>
-                            <p>I am doing great. How is school life?</p>
-                        </div>
-                        
-                    </div>
-                </div></router-link>
-                <router-link to="View"><div class="chats-area">
-                    <div class="status-sign-online"></div>
-                    <div class="user-img">
-                        <img src="../../assets/images/user4.png" >
-                    </div>
-                    <div class="user-name-time">
-                        <div class="user-name">
-                            <h5>Amaka Unizik</h5>
-                            <p>Okey Cool, I am sending in a while</p>
-                        </div>
-                    </div>
-                </div></router-link>
-            </div>
+        <div class="head-title">Contacts</div>
+        <div class="search-nav">
+          <router-link to="Search">
+            <font-awesome-icon icon="search" class="search mr-2" />
+          </router-link>
+          <router-link to="Settings">
+            <font-awesome-icon icon="ellipsis-v" class="search ml-3" />
+          </router-link>
         </div>
-        <div class="chatroom-footer fixed-bottom">
-            <router-link to="Contacts"><div class="chat">
-                <font-awesome-icon icon="user" class="fontawesom active1"/>
-            </div></router-link>
-            <router-link to="Call"><div class="chat">
-                <font-awesome-icon icon="phone-alt" class="fontawesom"/>
-            </div></router-link>
-            <router-link to="Chatroom">
-            <div class="start-chat">
-                <font-awesome-icon icon="comment-alt" class="start-chat-icon"/>
-            </div></router-link>
-            <router-link to="Groupchat"><div class="chat">
-                <font-awesome-icon icon="user-friends" class="fontawesom"/>
-            </div></router-link>
-            <router-link to="Settings"><div class="chat">
-                <font-awesome-icon icon="ellipsis-h" class="fontawesom"/>
-            </div></router-link>
-        </div>
-
+      </div>
     </div>
+    <div class="chatroom-body">
+      <div class="container">
+        <router-link to="SelectMembers">
+          <div class="chats-area">
+            <div class="user-img">
+              <img src="../../assets/images/group_icon.png" />
+            </div>
+            <div class="user-name-time">
+              <div class="user-name">
+                <h5>Create Group</h5>
+              </div>
+            </div>
+          </div>
+        </router-link>
+        <router-link to="AddContact">
+          <div class="chats-area">
+            <div class="user-img">
+              <img src="../../assets/images/user_icon.png" />
+            </div>
+            <div class="user-name-time">
+              <div class="user-name">
+                <h5>Add Contact</h5>
+              </div>
+            </div>
+          </div>
+        </router-link>
+        <router-link to="View">
+          <div class="chats-area" v-for="contact in CONTACTS" :key="contact">
+            <div class="status-sign-online"></div>
+            <div class="user-img">
+              <img src="../../assets/images/user_icon.png" />
+            </div>
+            <div class="user-name-time">
+              <div class="user-name">
+                <h5>{{contact.name}}</h5>
+                <p>{{contact.about}}</p>
+              </div>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+    <div class="chatroom-footer fixed-bottom">
+      <router-link to="Contacts">
+        <div class="chat">
+          <font-awesome-icon icon="user" class="fontawesom active1" />
+        </div>
+      </router-link>
+      <router-link to="Call">
+        <div class="chat">
+          <font-awesome-icon icon="phone-alt" class="fontawesom" />
+        </div>
+      </router-link>
+      <router-link to="Chatroom">
+        <div class="start-chat">
+          <font-awesome-icon icon="comment-alt" class="start-chat-icon" />
+        </div>
+      </router-link>
+      <router-link to="Groupchat">
+        <div class="chat">
+          <font-awesome-icon icon="user-friends" class="fontawesom" />
+        </div>
+      </router-link>
+      <router-link to="Settings">
+        <div class="chat">
+          <font-awesome-icon icon="ellipsis-h" class="fontawesom" />
+        </div>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Contacts.vue"
+import { chatService } from "../../services/chat.services";
+import Loader from "../../utils/vue-loader/loader.vue";
+import { mapState } from "vuex";
+export default {
+  name: "Contacts",
+  components: {
+    Loader
+  },
+  data() {
+    return {
+      loading: false
+    };
+  },
+  computed: {
+    ...mapState({
+      CONTACTS: state => state.Chat.CONTACTS,
+      USER_DATA:state => state.User.USER_DATA
+    })
+  },
+  methods: {
+    async GetContacts() {
+      this.loading = true;
+      await chatService
+        .GetContacts()
+        .then(res => {
+          this.$store.commit("SET_CONTACTS", res);
+        })
+        .catch(err => {
+          this.$toastr.e(err.message || err, "Couldn't Fetch Contacts");
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
+    connectSocket() {
+      this.$socket.emit("userConnected", {
+        id: this.USER_DATA._id,
+        name: this.USER_DATA.name,
+        socketId: null
+      });
     }
+  },
+  mounted() {
+    this.GetContacts();
+    this.connectSocket();
+  }
+};
 </script>
 
 <style scoped>
-    a{
-        text-decoration: none;
-    }
-    a:hover, a:focus, a:active{
-        text-decoration: none;
-    }
-    .advert{
-        height: 100px;
-        width: 100%;
-        background: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .adverts{
-        font-family: Avenir-Black;
-        font-size: 22px;
-        color: #000000;
-        text-align: center;
-    }
-
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+.advert {
+  height: 100px;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adverts {
+  font-family: Avenir-Black;
+  font-size: 22px;
+  color: #000000;
+  text-align: center;
+}
 </style>
