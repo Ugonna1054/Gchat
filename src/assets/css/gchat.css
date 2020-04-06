@@ -241,7 +241,7 @@ a:hover, a:focus, a:active{
     align-items: center;
     color: #ffffff;
     background: #4850B1;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 1rem 1rem;
     width: 100%;
 }
 .gchat-logo{
@@ -523,19 +523,20 @@ a:hover, a:focus, a:active{
 .profile-picture-section2{
     background: #ffffff;
     width: 100%;
-    height: 180px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4.5rem;
 }
 .profile_img{
-    width: 120px;
+    width: 100%;
     height: 120px;
     border-radius: 50%;
     margin: 0 auto;
     text-align: center;
     object-fit: cover;
+    padding: 0 1rem;
 }
 .profile_img img{
     width: 120px;
