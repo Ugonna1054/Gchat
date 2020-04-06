@@ -148,6 +148,10 @@ a:hover, a:focus, a:active{
     background-image: url("../../assets/images/login-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+.login-page-inner{
+    width: 100%;
+    height: 100vh;
     color: #ffffff;
     text-align: center;
     display: flex;
@@ -178,16 +182,16 @@ a:hover, a:focus, a:active{
     width: 100%;
     height: 100vh;
     background-color: #454EAF;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    
     /*background:linear-gradient(0deg,rgba(230,147,52,0.7),rgba(230,147,52,0.7)),url(../../assets/images/okike-splash-bg2.svg) bottom right no-repeat;*/
     /*background: url("../../assets/images/okike-splash-bg2.svg") bottom 70px right no-repeat;*/
 
 }
 .gchat-verify-inner{
     padding: 1.5rem 0;
-
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .verify-title {
     color: #ffffff;
@@ -638,7 +642,7 @@ a:hover, a:focus, a:active{
     border-radius: 35px;
     font-family: Avenir-Roman;
     font-size: 19px;
-    color: #000000;
+    color: #ffffff;
     letter-spacing: 0;
     padding: 1rem 2rem;
     width: 100%;
@@ -929,4 +933,7 @@ a:hover, a:focus, a:active{
     color: #000000;
     text-align: center;
     letter-spacing: 0;
+}
+.emoji-icon{
+    background: transparent;
 }
