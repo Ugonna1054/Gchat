@@ -14,6 +14,12 @@ const mutations = {
     SET_GROUP_DETAILS(state, payload) {
         state.GROUP_DETAILS = payload;
     },
+    SET_PRIVATE_MESSAGE(state, payload) {
+        state.PRIVATE_MESSAGE = payload;
+    },
+    SET_PRIVATE_DETAILS(state, payload) {
+        state.PRIVATE_DETAILS = payload;
+    },
 };
 
 export { mutations };

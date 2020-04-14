@@ -7,7 +7,10 @@ const state = {
   SELECTED_CONTACTS:[],
   GROUPS:[],
   GROUP_MESSAGE:[],
-  GROUP_DETAILS:{} //all groups connected to a user
+  GROUP_DETAILS:{}, //all groups connected to a user
+  PRIVATE_MESSAGE:[],
+  PROIVATE_DETAILS:{}, //all groups connected to a user
+
 };
 
 export default { state, getters, mutations, actions };

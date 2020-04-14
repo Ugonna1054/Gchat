@@ -89,7 +89,7 @@ const chatService = {
         });
     },
 
-    //Get all Group Messages connected to one user
+    //Post new Group Message
     PostMessage: ({message, group}) => {
         return new Promise(function (resolve, reject) {
             ApiService.post("/messages", {
@@ -104,6 +104,49 @@ const chatService = {
                 });
         });
     },
+
+    //Post new Private Message
+    PostMessagePrivate: ({message, receiver}) => {
+        return new Promise(function (resolve, reject) {
+            ApiService.post("/messages/private", {
+                message,
+                receiver
+            })
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
+        });
+    },
+
+    //Get  specific Private Messages for a user on mounted of the /view route
+    GetMessagePrivate: (id) => {
+        return new Promise(function (resolve, reject) {
+            ApiService.get(`/messages/private/${id}`)
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
+        });
+    },
+
+    //Get all Private Messages for a user on mounted of the /contacts route
+    GetMessagePrivateAll: () => {
+        return new Promise(function (resolve, reject) {
+            ApiService.get(`/messages/private/all`)
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(error => {
+                    reject(error.response.data);
+                });
+        });
+    },
+
 
 };
 

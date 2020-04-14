@@ -44,7 +44,12 @@
           </div>
         </router-link>
         <router-link to="View">
-          <div class="chats-area" v-for="contact in CONTACTS" :key="contact">
+          <div
+            class="chats-area"
+            v-for="(contact, index) in CONTACTS"
+            :key="contact"
+            @click="PrivateDetails(index)"
+          >
             <div class="status-sign-online"></div>
             <div class="user-img">
               <img src="../../assets/images/user_icon.png" />
@@ -52,7 +57,7 @@
             <div class="user-name-time">
               <div class="user-name">
                 <h5>{{contact.name}}</h5>
-                <p>{{contact.about}}</p>
+                <p>  {{GetMessagesOne(contact._id)}} </p>
               </div>
             </div>
           </div>
@@ -100,14 +105,20 @@ export default {
   },
   data() {
     return {
-      loading: false
+      loading: false,
+      Messages: []
     };
   },
   computed: {
     ...mapState({
       CONTACTS: state => state.Chat.CONTACTS,
-      USER_DATA:state => state.User.USER_DATA
+      USER_DATA: state => state.User.USER_DATA
     })
+  },
+  sockets: {
+    privateMessage() {
+      this.GetMessages();
+    }
   },
   methods: {
     async GetContacts() {
@@ -124,17 +135,44 @@ export default {
           this.loading = false;
         });
     },
+    async GetMessages() {
+      //this.loading = true;
+      await chatService
+        .GetMessagePrivateAll()
+        .then(res => {
+          this.Messages = res;
+        })
+        .catch(() => {
+          this.Messages = []
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
+    GetMessagesOne (id) {
+      let messages = this.Messages;
+      messages = messages.filter(item => item.receiver._id == id || item .sender._id == id);
+      if(!messages[0]) return ""
+      return(messages[messages.length - 1].message)
+    },
     connectSocket() {
       this.$socket.emit("userConnected", {
         id: this.USER_DATA._id,
         name: this.USER_DATA.name,
         socketId: null
       });
+    },
+    PrivateDetails(n) {
+      let privateDetails = this.CONTACTS[n];
+      this.$store.commit("SET_PRIVATE_DETAILS", privateDetails);
+      this.$socket.emit("joined", this.$store.state.Chat.PRIVATE_DETAILS._id);
+      this.$router.push("View");
     }
   },
   mounted() {
     this.GetContacts();
     this.connectSocket();
+    this.GetMessages()
   }
 };
 </script>

@@ -85,7 +85,7 @@
           <div class="emoji-icon">
             <font-awesome-icon icon="paperclip" class="smile-icon" />
           </div>
-          <button type="submit" class="emoji-icon">
+          <button type="submit" class="emoji-icon" :disabled="isMessage">
             <font-awesome-icon icon="paper-plane" style="cursor:pointer" class="mic-icon" />
           </button>
         </div>
@@ -106,7 +106,8 @@ export default {
   data() {
     return {
       loading: false,
-      message:""
+      message:"",
+      isMessage:true
     };
   },
   sockets: {
@@ -174,7 +175,8 @@ export default {
   },
   watch: {
     message(value) {
-      if (value == "") return;
+      if (value == "") return this.isMessage = true;
+      this.isMessage = false
       this.$socket.emit("typing", {
         username: this.USER.username,
         group: this.user.group

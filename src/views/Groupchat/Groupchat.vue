@@ -102,7 +102,7 @@ export default {
   },
   methods: {
     async GetGroups() {
-      //this.loading = true;
+      this.loading = true;
       await chatService
         .GetGroups()
         .then(res => {
