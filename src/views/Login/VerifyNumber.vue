@@ -1,32 +1,34 @@
 <template>
-  <div class="gchat-verify container">
-    <div class="gchat-verify-inner">
-      <Loader :loading="loading" loading-text="please wait..." />
-      <div class="back-btn">
-        <a @click="$router.go(-1)">
-          <img src="../../assets/images/back-btn.svg" />
-        </a>
-      </div>
+  <div class="gchat-verify ">
+    <div class="container">
+      <div class="gchat-verify-inner">
+        <Loader :loading="loading" loading-text="please wait..." />
+        <div class="back-btn">
+          <a @click="$router.go(-1)">
+            <img src="../../assets/images/back-btn.svg" />
+          </a>
+        </div>
 
-      <div class="verify-title">
-        <h3>Hi, please enter the 6 digit code that was sent to your email.</h3>
+        <div class="verify-title">
+          <h3>Hi, please enter the 6 digit code that was sent to your email.</h3>
+        </div>
+        <div class="verify-number">
+          <input
+            class="verify-input"
+            v-model="code"
+            type="tel"
+            name="tel"
+            placeholder="Activation Code"
+            required
+          />
+          <!-- <router-link to="Username"> -->
+          <button @click="VerifyEmail" class="verify-btn">Verify Code</button>
+          <!-- </router-link> -->
+        </div>
       </div>
-      <div class="verify-number">
-        <input
-          class="verify-input"
-          v-model="code"
-          type="tel"
-          name="tel"
-          placeholder="Activation Code"
-          required
-        />
-        <!-- <router-link to="Username"> -->
-        <button @click="VerifyEmail" class="verify-btn">Verify Code</button>
-        <!-- </router-link> -->
+      <div class="verify-footer" @click="resendOtp" style="cursor:pointer">
+        <img src="../../assets/images/resendcode.svg" />
       </div>
-    </div>
-    <div class="verify-footer" @click="resendOtp" style="cursor:pointer">
-      <img src="../../assets/images/resendcode.svg" />
     </div>
   </div>
 </template>

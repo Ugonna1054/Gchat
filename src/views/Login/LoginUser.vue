@@ -1,37 +1,39 @@
 <template>
-  <div class="gchat-verify container">
-    <div class="gchat-verify-inner">
-      <Loader :loading="loading" loading-text="please wait..." />
-      <div class="back-btn">
-        <a @click="$router.go(-1)">
-          <img src="../../assets/images/back-btn.svg" />
-        </a>
-      </div>
+  <div class="gchat-verify ">
+    <div class="container">
+      <div class="gchat-verify-inner">
+        <Loader :loading="loading" loading-text="please wait..." />
+        <div class="back-btn">
+          <a @click="$router.go(-1)">
+            <img src="../../assets/images/back-btn.svg" />
+          </a>
+        </div>
 
-      <div class="verify-title">
-        <h3>Hi, Welcome back.</h3>
-        <p>Kindly enter your email or username to login.</p>
-      </div>
-      <div class="verify-number">
-        <input
-          class="verify-input"
-          type="email"
-          name="email"
-          v-model="username"
-          placeholder="Email or Username"
-          required
-        />
-        <!-- <input
-          class="verify-input"
-          v-model="password"
-          type="password"
-          name="password"
-          placeholder="****"
-          required
-        /> -->
-        <!-- <router-link to="VerifyNumber"> -->
-          <button class="verify-btn" @click="Signin">Login</button>
-        <!-- </router-link> -->
+        <div class="verify-title">
+          <h3>Hi, Welcome back.</h3>
+          <p>Kindly enter your email or username to login.</p>
+        </div>
+        <div class="verify-number">
+          <input
+            class="verify-input"
+            type="email"
+            name="email"
+            v-model="username"
+            placeholder="Email or Username"
+            required
+          />
+          <!-- <input
+            class="verify-input"
+            v-model="password"
+            type="password"
+            name="password"
+            placeholder="****"
+            required
+          /> -->
+          <!-- <router-link to="VerifyNumber"> -->
+            <button class="verify-btn" @click="Signin">Login</button>
+          <!-- </router-link> -->
+        </div>
       </div>
     </div>
   </div>
