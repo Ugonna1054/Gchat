@@ -3,8 +3,8 @@ import VueSocketIO from "vue-socket.io";
 Vue.use(
   new VueSocketIO({
     debug: true,
-    //connection: ("http://localhost:5000")
-    connection: ("https://gchat-myapp.herokuapp.com")
+    connection: ("http://localhost:5000")
+    // connection: ("https://gchat-myapp.herokuapp.com")
 
   })
 );
