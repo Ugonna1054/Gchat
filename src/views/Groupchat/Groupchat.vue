@@ -19,7 +19,20 @@
     </div>
     <div class="chatroom-body">
       <div class="container">
-        <div>
+         <router-link to="SelectMembers">
+          <div class="chats-area">
+            <div class="user-img">
+              <img src="../../assets/images/group_icon.png" />
+            </div>
+            <div class="user-name-time">
+              <div class="user-name">
+                <h5>Create Group</h5>
+              </div>
+            </div>
+          </div>
+        </router-link>
+
+        <div class="mt-3">
           <div
             class="chats-area"
             v-for="(group, index) in GROUPS"
@@ -77,6 +90,7 @@
 </template>
 
 <script>
+///TODO : EMIT A USERCONNECTED EVENT HERE
 import { chatService } from "../../services/chat.services";
 import Loader from "../../utils/vue-loader/loader.vue";
 import { mapState } from "vuex";
@@ -102,7 +116,7 @@ export default {
   },
   methods: {
     async GetGroups() {
-      this.loading = true;
+      //this.loading = true;
       await chatService
         .GetGroups()
         .then(res => {

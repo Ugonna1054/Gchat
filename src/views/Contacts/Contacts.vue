@@ -57,7 +57,8 @@
             <div class="user-name-time">
               <div class="user-name">
                 <h5>{{contact.name}}</h5>
-                <p>  {{GetMessagesOne(contact._id)}} </p>
+                <p v-if="contact.about">  {{contact.about}} </p>
+                <p v-else> Available </p>
               </div>
             </div>
           </div>
@@ -115,11 +116,11 @@ export default {
       USER_DATA: state => state.User.USER_DATA
     })
   },
-  sockets: {
-    privateMessage() {
-      this.GetMessages();
-    }
-  },
+  // sockets: {
+  //   privateMessage() {
+  //     this.GetMessages();
+  //   }
+  // },
   methods: {
     async GetContacts() {
       this.loading = true;
@@ -135,26 +136,26 @@ export default {
           this.loading = false;
         });
     },
-    async GetMessages() {
-      //this.loading = true;
-      await chatService
-        .GetMessagePrivateAll()
-        .then(res => {
-          this.Messages = res;
-        })
-        .catch(() => {
-          this.Messages = []
-        })
-        .finally(() => {
-          this.loading = false;
-        });
-    },
-    GetMessagesOne (id) {
-      let messages = this.Messages;
-      messages = messages.filter(item => item.receiver._id == id || item .sender._id == id);
-      if(!messages[0]) return ""
-      return(messages[messages.length - 1].message)
-    },
+    // async GetMessages() {
+    //   //this.loading = true;
+    //   await chatService
+    //     .GetMessagePrivateAll()
+    //     .then(res => {
+    //       this.Messages = res;
+    //     })
+    //     .catch(() => {
+    //       this.Messages = []
+    //     })
+    //     .finally(() => {
+    //       this.loading = false;
+    //     });
+    // },
+    // GetMessagesOne (id) {
+    //   let messages = this.Messages;
+    //   messages = messages.filter(item => item.receiver._id == id || item .sender._id == id);
+    //   if(!messages[0]) return ""
+    //   return(messages[messages.length - 1].message)
+    // },
     connectSocket() {
       this.$socket.emit("userConnected", {
         id: this.USER_DATA._id,
@@ -172,7 +173,7 @@ export default {
   mounted() {
     this.GetContacts();
     this.connectSocket();
-    this.GetMessages()
+    //this.GetMessages()
   }
 };
 </script>

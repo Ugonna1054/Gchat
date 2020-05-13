@@ -354,7 +354,18 @@ a:hover, a:focus, a:active{
     height: 41px;
     border-radius: 50%;
 }
-.status-sign-online{
+.statusDefault{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #9B9B9B;
+    border: 1px solid #FFFFFF;
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    margin-right: -0.8rem;
+}
+.statusOnline{
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -365,7 +376,7 @@ a:hover, a:focus, a:active{
     padding: 5px;
     margin-right: -0.8rem;
 }
-.status-sign-offline{
+.statusOffline{
     width: 12px;
     height: 12px;
     border-radius: 50%;

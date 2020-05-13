@@ -15,13 +15,10 @@
             </div>
           </router-link>
           <router-link to="Profile">
-            <div class="head-user-title"> {{PRIVATE_DETAILS.name}} </div>
+            <div class="head-user-title">{{truncName(PRIVATE_DETAILS.name)}}</div>
           </router-link>
         </div>
         <div class="view-chat-head-right">
-          <!-- <div class="call-nav">
-                        <font-awesome-icon icon="video" class="search"/>
-          </div>-->
           <router-link to="Call">
             <div class="call-nav">
               <font-awesome-icon icon="phone-alt" class="search" />
@@ -36,7 +33,7 @@
       </div>
     </div>
     <div class="view-chat-body" id="container">
-      <div class="container"  v-if="PRIVATE_MESSAGE[0]">
+      <div class="container" v-if="PRIVATE_MESSAGE[0]">
         <div
           v-for="message in PRIVATE_MESSAGE"
           :key="message"
@@ -60,7 +57,7 @@
             >
               <!-- <span
                 v-if="message.type === 1 || message.sender._id != USER._id"
-              >{{message.sender.name}}</span> -->
+              >{{message.sender.name}}</span>-->
               <span v-if="message.type === 0 || message.sender._id == USER._id">You</span>
             </div>
             <div class="users_message2">{{message.message}}</div>
@@ -108,7 +105,7 @@ export default {
     return {
       loading: false,
       message: "",
-      isMessage:true
+      isMessage: true
     };
   },
   sockets: {
@@ -161,21 +158,20 @@ export default {
       }, 1000);
     },
     privateMessage(data) {
-        window.console.log(data);
-        
+      //window.console.log(data);
       this.PRIVATE_MESSAGE.push({
         message: data.message,
         type: 1,
         sender: {
-          _id: data.id,
+          _id: data.id
         }
       });
     }
   },
   watch: {
     message(value) {
-      if (value == "") return this.isMessage = true;
-      this.isMessage = false
+      if (value == "") return (this.isMessage = true);
+      this.isMessage = false;
       this.$socket.emit("typing", {
         username: this.USER.username,
         group: this.user.group
@@ -205,6 +201,11 @@ export default {
           this.loading = false;
         });
     },
+    truncName(str) {
+      let name = str.substring(0, 15);
+      if (str.length <= 15) return str;
+      return name + "...";
+    },
     //send new message
     async send() {
       if (this.message == "") return;
@@ -212,22 +213,21 @@ export default {
       await chatService
         .PostMessagePrivate({
           message: this.message,
-          receiver: this.PRIVATE_DETAILS._id,
+          receiver: this.PRIVATE_DETAILS._id
         })
         .then(() => {
           this.newMessage_();
           this.$socket.emit("privateMessage", {
             id: this.USER._id,
             sender: this.USER._id,
-            receiver:this.PRIVATE_DETAILS._id,
-            message: this.message,
+            receiver: this.PRIVATE_DETAILS._id,
+            message: this.message
           });
           this.message = null;
         })
         .catch(err => {
           this.$toastr.e(err.message || err, "Failed");
           //window.console.log(err);
-          
         })
         .finally(() => {
           this.loading = false;
@@ -250,11 +250,11 @@ export default {
     scrollToEnd() {
       let container = this.$el.querySelector("#container");
       container.scrollTop = container.scrollHeight - container.clientHeight;
-    },
+    }
   },
 
-  mounted () {
-      this.GetMessages()
+  mounted() {
+    this.GetMessages();
   },
   updated() {
     this.$nextTick(() => this.scrollToEnd());

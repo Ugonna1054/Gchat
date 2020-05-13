@@ -37,7 +37,7 @@
                   sent: message.type === 0 || message.sender._id == USER._id
                 }"
         >
-          <div class="date_time" v-if="message.type === 0 || message.sender._id == USER._id">12:30</div>
+          <!-- <div class="date_time" v-if="message.type === 0 || message.sender._id == USER._id">12:30</div> -->
           <div
             :class="{
                   recipient_message2: message.type === 1 || message.sender._id != USER._id,

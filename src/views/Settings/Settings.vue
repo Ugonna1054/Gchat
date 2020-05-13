@@ -148,7 +148,10 @@ export default {
   },
   methods: {
     logout() {
-      localStorage.clear();
+      this.$store.commit("SET_USER_EMAIL", "")
+      this.$store.commit("SET_USER_DATA", {})
+      this.$store.commit("SET_IS_AUTHENTICATED", "")
+      this.$store.commit("SET_AUTH_TOKEN", "")
       this.$router.push("/LoginUser");
     }
   }

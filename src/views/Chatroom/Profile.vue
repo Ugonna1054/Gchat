@@ -152,7 +152,8 @@ export default {
             NG:"Nigeria",
             SA:"South Africa",
             GH:"Ghana",
-            TG:"Togo"
+            TG:"Togo",
+            DE:"Germany"
         }
         return data;
     }
