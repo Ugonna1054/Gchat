@@ -19,7 +19,7 @@
     "core-js": "^3.3.2",
     "flatted": "^2.0.1",
     "jquery": "^3.5.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "vee-validate": "^3.2.5",
     "vue": "^2.6.10",
